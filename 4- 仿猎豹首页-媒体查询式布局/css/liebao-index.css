@@ -1,0 +1,93 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89px;
+    background: url("http://www.liebao.cn/lbimages/nav-b.png") repeat-x;
+}
+.main{
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+}
+h1{
+    float: left;
+    margin-top:19px;
+}
+h1 a{
+    font-size: 0;
+}
+h1 a img{
+    display: block;
+    width: 270px;
+    height: 51px;
+}
+.header .nav{
+    float: right;
+}
+.header .nav a{
+    position: relative;
+    float: right;
+    height: 88px;
+    line-height: 88px;
+    padding: 0 30px;
+    font-size: 18px;
+    color: #f4f4f4;
+    opacity:.8;
+    filter:alpha(opacity=.8)
+}
+.header .nav i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 88px;
+    background: #000;
+    opacity:0;
+    filter:alpha(opacity=0)
+}
+.header .nav span{
+    position: relative;
+    z-index: 2;
+}
+
+
+.header .nav a:hover{
+    color: #fff;
+    opacity:1;
+}
+.header .nav a:hover i{
+    opacity:.1;
+    filter:alpha(opacity=.1);
+    animation:navAnimation .2s linear;
+
+}
+@keyframes navAnimation{
+    0%{
+        transform:scale(0,1) ;
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}
+
+@media screen and (max-width:760px){
+    .header{
+        height: 48px;
+    }
+    .header .main{
+        width: 100%;
+    }
+    h1{
+        margin:9px 0 0 10px;
+    }
+    h1 a img{
+        width: 148px;
+        height: 28px;
+    }
+    .nav{
+        display: none;
+    }
+}
